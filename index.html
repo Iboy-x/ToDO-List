@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive To-Do List</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Focus App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>To-Do List</h1>
-    <form id="todo-form">
-      <input type="text" id="todo-input" placeholder="Add a new task..." required>
-      <button type="submit">Add Task</button>
-    </form>
-    <ul id="todo-list"></ul>
+  <div class="dashboard">
+    <h2>Dashboard</h2>
+    <p>Total Focus Time: <span id="total-focus-time">0h 0m</span></p>
+    <canvas id="categoryChart" width="400" height="200"></canvas>
   </div>
-  <script src="script.js"></script>
+
+    <div class="app">
+        <header>
+            <h1>Study Focus App</h1>
+            <p>Stay focused and accomplish your tasks!</p>
+        </header>
+        <main>
+          
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <ul id="task-list"></ul>
+        </main>
+        <footer>
+            <p>Made with ❤️ for productivity.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for setting timer -->
+    <div id="timer-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Set Timer</h2>
+            <label for="timer-input">Enter time (minutes):</label>
+            <input type="number" id="timer-input" min="1" placeholder="25">
+            <button id="set-timer-btn">Set Timer</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Random Quote Generator | Made with ❤️ by Abdul Moiz | For HackClubbers</p>
+            <div class="social-links">
+                <a href="https://github.com/Iboy-x" target="_blank" aria-label="GitHub">
+                    <img src="https://img.icons8.com/material-outlined/24/00bcd4/github.png" alt="GitHub">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
